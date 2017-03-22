@@ -1,6 +1,6 @@
 ﻿namespace PalestraMongoDB.Domain
 {
-    public class Aluno
+    public class Aluno : Entity
     {
         public string Nome { get; set; }
 
