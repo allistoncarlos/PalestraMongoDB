@@ -31,6 +31,15 @@ namespace PalestraMongoDB
             // Add framework services.
             services.AddMvc();
 
+			// Add Session services
+            services.AddDistributedMemoryCache();
+			services.AddSession(options =>
+			{
+				// Set a short timeout for easy testing.
+				options.IdleTimeout = TimeSpan.FromHours(1);
+				options.CookieHttpOnly = true;
+			});
+
 			// MongoDB
 			var connection = Configuration.GetConnectionString("PalestraMongoDB");
 			services.AddSingleton<IConnectionStringConfiguration>(new ConnectionStringConfiguration(connection));
@@ -53,6 +62,7 @@ namespace PalestraMongoDB
             }
 
             app.UseStaticFiles();
+			app.UseSession();
 
             app.UseMvc(routes =>
             {

@@ -28,6 +28,29 @@
             </div>
         </div>
 
+		<div class="row">
+			<div class="col-lg-12">
+	            <div class="form-group label-floating">
+	                <label class="control-label" for="Disciplinas">Disciplinas</label>
+	                <select id="Disciplinas" name="Disciplinas" asp-items="@ViewBag.Disciplinas" class="form-control">
+	                	<option></option>
+					</select>
+	                <span class="field-validation-valid text-danger" data-valmsg-for="Disciplinas" data-valmsg-replace="true"></span>
+	            </div>
+			</div>
+        </div>
+
+		<div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <!--<input type="submit" value="SALVAR" class="btn btn-raised btn-primary btn-lg" />-->
+					<a href="#" id="addDisciplina" class="btn btn-raised btn-primary btn-lg">Adicionar Disciplina</a>
+                </div>
+            </div>
+        </div>
+
+		<div id="DisciplinasTable"></div>
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
@@ -36,4 +59,26 @@
             </div>
         </div>
     </div>
+
+    @section Scripts {
+	    <script>
+	    	$(document).ready(function () {
+	    		$("#addDisciplina").click(addDisciplina)	
+			});
+
+			function addDisciplina() {
+				var disciplinaId = $("#Disciplinas").val();
+	
+				$.ajax({
+	                type:"GET",
+	                contentType: "application/json",
+	                url: "/Aluno/AddDisciplina/" + disciplinaId
+	            }).done(disciplinaAdded);
+			}
+
+			function disciplinaAdded(data) {
+				$("#DisciplinasTable").html(data);
+			}
+		</script>
+	}
 }

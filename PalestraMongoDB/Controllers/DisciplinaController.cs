@@ -66,7 +66,7 @@ namespace PalestraMongoDB.Controllers
 			return RedirectToAction("Index");
 		}
 
-		public DisciplinaModel ToModel(Disciplina domain)
+		private DisciplinaModel ToModel(Disciplina domain)
 		{
 			return new DisciplinaModel
 			{
@@ -76,7 +76,7 @@ namespace PalestraMongoDB.Controllers
 			};
 		}
 
-		public Disciplina ToDomain(DisciplinaModel model)
+		private Disciplina ToDomain(DisciplinaModel model)
 		{
 			return new Disciplina
 			{
