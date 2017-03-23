@@ -30,5 +30,7 @@
     <Folder Include="Views\Disciplina\" />
     <Folder Include="Model\" />
     <Folder Include="Model\Disciplina\" />
+    <Folder Include="Model\Aluno\" />
+    <Folder Include="Views\Aluno\" />
   </ItemGroup>
 </Project>
