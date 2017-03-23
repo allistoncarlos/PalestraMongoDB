@@ -1,0 +1,6 @@
+namespace PalestraMongoDB
+{
+	interface IConnectionStringConfiguration
+	{
+	}
+}

@@ -20,6 +20,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PalestraMongoDB.Domain\PalestraMongoDB.Domain.csproj" />
+    <ProjectReference Include="..\PalestraMongoDB.Repository\PalestraMongoDB.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="IConnectionStringConfiguration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Disciplina\" />
+    <Folder Include="Model\" />
+    <Folder Include="Model\Disciplina\" />
+  </ItemGroup>
 </Project>

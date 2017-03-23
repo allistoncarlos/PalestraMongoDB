@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using PalestraMongoDB.Repository;
 
 namespace PalestraMongoDB
 {
@@ -29,6 +30,10 @@ namespace PalestraMongoDB
         {
             // Add framework services.
             services.AddMvc();
+
+			// MongoDB
+			var connection = Configuration.GetConnectionString("PalestraMongoDB");
+			services.AddSingleton<IConnectionStringConfiguration>(new ConnectionStringConfiguration(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

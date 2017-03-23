@@ -3786,6 +3786,15 @@
           "Microsoft.NETCore.App": "1.1.1",
           "MongoDB.Driver": "2.4.3"
         }
+      },
+      "PalestraMongoDB.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.1",
+          "MongoDB.Driver": "2.4.3",
+          "PalestraMongoDB.Domain": "1.0.0"
+        }
       }
     }
   },
@@ -10029,6 +10038,11 @@
       "type": "project",
       "path": "../PalestraMongoDB.Domain/PalestraMongoDB.Domain.csproj",
       "msbuildProject": "../PalestraMongoDB.Domain/PalestraMongoDB.Domain.csproj"
+    },
+    "PalestraMongoDB.Repository/1.0.0": {
+      "type": "project",
+      "path": "../PalestraMongoDB.Repository/PalestraMongoDB.Repository.csproj",
+      "msbuildProject": "../PalestraMongoDB.Repository/PalestraMongoDB.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10040,7 +10054,8 @@
       "Microsoft.Extensions.Logging.Debug >= 1.1.1",
       "Microsoft.NETCore.App >= 1.1.1",
       "Microsoft.VisualStudio.Web.BrowserLink >= 1.1.0",
-      "PalestraMongoDB.Domain >= 1.0.0"
+      "PalestraMongoDB.Domain >= 1.0.0",
+      "PalestraMongoDB.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10062,6 +10077,9 @@
           "projectReferences": {
             "/Users/alliston/Documents/Projetos/Estudos/DotNet Core/PalestraMongoDB/PalestraMongoDB.Domain/PalestraMongoDB.Domain.csproj": {
               "projectPath": "/Users/alliston/Documents/Projetos/Estudos/DotNet Core/PalestraMongoDB/PalestraMongoDB.Domain/PalestraMongoDB.Domain.csproj"
+            },
+            "/Users/alliston/Documents/Projetos/Estudos/DotNet Core/PalestraMongoDB/PalestraMongoDB.Repository/PalestraMongoDB.Repository.csproj": {
+              "projectPath": "/Users/alliston/Documents/Projetos/Estudos/DotNet Core/PalestraMongoDB/PalestraMongoDB.Repository/PalestraMongoDB.Repository.csproj"
             }
           }
         }
